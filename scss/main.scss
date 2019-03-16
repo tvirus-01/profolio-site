@@ -33,6 +33,16 @@ h1,h2,h3{
 	}
 }
 
+    .sm-heading-1{
+        color: $ggl-green;
+    }
+    .sm-heading-2{
+        color: $sec-color;
+    }
+    .sm-heading-3{
+        color: $ggl-blue;
+    }
+
 a{
 	color: #fff;
 	text-decoration: none;
