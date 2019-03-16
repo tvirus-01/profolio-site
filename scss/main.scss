@@ -1,5 +1,74 @@
-$primary_color: #E34343;
+@import 'config';
+
+*{
+	box-sizing: border-box;
+}
 
 body{
+	@include background();
 	background-color: $primary_color;
+	color: #fff;
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.5;
+}
+
+//Headings
+
+h1,h2,h3{
+	margin: 0;
+	font-weight: 400;
+
+	&.lg-heading{
+		font-size: 6rem;
+	}	
+	&.sm-heading{
+		margin-bottom: 2rem;
+		padding: 0.2rem 1rem;
+		background: rgba(lighten($primary_color, 2), 0.5);
+	}
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+header{
+	position: fixed;
+}
+
+.lg-heading-sec{
+	color: $sec-color;
+}
+.lg-heading-third{
+	color: $third-color;
+}
+
+main{
+	padding:4rem;
+	height: 100%;
+
+	.icons{
+		margin-top: 1rem;
+
+		a{
+			padding: 1rem;
+
+			&:hover{
+				color: $sec-color;
+				@include eseout();
+			}
+		}
+	}
+
+	&#home{
+		overflow: hidden;
+
+		h1{
+			margin-top: 20vh;
+		}
+	}
 }
